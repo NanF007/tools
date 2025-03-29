@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>支付明细</title>
-  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4873251_td0vyiedmp.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4873251_en9k2xnuneo.css">
   <style>
     @font-face {
       font-family: "ClearSans";
@@ -13,7 +13,7 @@
     }
 
     body {
-      font-family: "ClearSans", sans-serif;
+      font-family: "ClearSans", sans-serif !important;
       margin: 0;
       background: #fff;
     }
@@ -42,6 +42,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-family: 'ClearSans', sans-serif;
       font-size: 16px;
     }
 
@@ -49,6 +50,7 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      font-family: 'ClearSans', sans-serif;
       font-size: 16px;
     }
 
@@ -73,21 +75,25 @@
     }
 
     .rotate-fa {
-      position: relative;
+      display: flex;
+      align-items: center;
     }
 
     .rotate {
-      position: absolute;
+      /* position: absolute;
       top: 3px;
       right: 0px;
-      display: inline-block;
+      display: inline-block; */
       /* 必须设置为块级元素才能生效 */
-      transform: rotate(-45deg);
+      /* transform: rotate(-45deg); */
       /* 防止旋转后文字模糊 */
-      backface-visibility: hidden;
+      /* backface-visibility: hidden; */
       /* 调整旋转中心点（可选） */
-      transform-origin: 50% 50%;
-      font-size: 14px;
+      /* transform-origin: 50% 50%; */
+      display: flex;
+      align-items: center;
+      font-family: 'ClearSans', sans-serif;
+      font-size: 12px;
     }
 
     /* 新增样式 */
@@ -97,12 +103,14 @@
     }
 
     .currency-input {
+      flex-shrink: 0;
       width: auto;
       padding: 4px 0;
       border: none !important;
       outline: none;
       text-align: right;
       font-family: inherit;
+      font-family: 'ClearSans', sans-serif;
       font-size: 16px;
       background: transparent;
       font-weight: inherit;
@@ -110,7 +118,7 @@
     }
 
     .paddingRight {
-      padding-right: 20px;
+      padding-right: 10px;
     }
 
     /* 动态宽度调整相关 */
@@ -119,6 +127,7 @@
       visibility: hidden;
       white-space: nowrap;
       padding: 4px 0;
+      font-family: 'ClearSans', sans-serif;
       font-size: 16px;
     }
 
@@ -149,12 +158,15 @@
       border: none;
       font-family: inherit;
       font-size: 16px;
+      font-family: 'ClearSans', sans-serif;
       background: transparent;
     }
 
     .time-label {
       width: 80px;
+      height: 40px;
       flex-shrink: 0;
+      font-family: 'ClearSans', sans-serif;
       font-size: 16px;
       display: flex;
       align-items: center;
@@ -174,6 +186,7 @@
     }
 
     .iconfont {
+      font-family: 'ClearSans', sans-serif;
       font-size: 20px;
     }
 
@@ -190,6 +203,7 @@
       padding: 6px 30px 6px 8px;
       border: none;
       font-family: inherit;
+      font-family: 'ClearSans', sans-serif;
       font-size: 16px;
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat right 8px center;
       background-size: 12px;
@@ -203,6 +217,7 @@
       /* 留出旋转图标空间 */
       width: auto !important;
       min-width: 120px;
+      font-family: 'ClearSans', sans-serif;
       font-size: 18px;
       font-weight: 600;
       /* 初始最小宽度 */
@@ -219,16 +234,24 @@
 
     /* 旋转图标定位优化 */
     .date-rotate {
-      position: absolute;
-      right: 8px;
-      top: 45%;
-      transform: translateY(-50%) rotate(-45deg);
+      display: flex;
+      align-items: center;
+      /* position: absolute; */
+      /* right: 8px; */
+      /* top: 45%; */
+      /* transform: translateY(-50%) rotate(-45deg); */
       pointer-events: auto !important;
       /* 允许接收点击事件 */
       cursor: pointer;
       /* 显示手型光标 */
       z-index: 4;
+      font-size: 12px;
       /* 确保图标在输入框上层 */
+    }
+
+    .icon-xiasanjiao {
+      font-family: 'ClearSans', sans-serif;
+      font-size: 10px;
     }
 
     /* 动态测量元素 */
@@ -306,11 +329,17 @@
 
     .date {
       display: block;
-      padding: 6px 30px 6px 8px;
+      padding: 6px 10px 6px 8px;
       min-width: 120px;
       text-align: right;
-      font: 16px ClearSans;
+      font-family: 'ClearSans', sans-serif;
+      font-size: 18px;
       font-weight: 600;
+    }
+
+    .icon-xiasanjiao {
+      font-family: 'ClearSans', sans-serif;
+      font-size: 10px;
     }
 
     input[type="date"] {
@@ -337,6 +366,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      font-family: 'ClearSans', sans-serif;
       font-size: 12px;
       color: #838383;
     }
@@ -350,6 +380,7 @@
     }
 
     .time-range {
+      font-family: 'ClearSans', sans-serif;
       color: #000;
       font-size: 16px;
       font-weight: 600;
@@ -406,6 +437,7 @@
       padding: 4px 0px;
       border-radius: 4px;
       transition: background 0.2s;
+      font-family: 'ClearSans', sans-serif;
       font-size: 16px;
       font-weight: 600;
       color: #333;
@@ -425,7 +457,9 @@
         <span class="boldText">收款</span>
         <div class="rotate-fa">
           <input type="number" class="currency-input paddingRight" value="1167.57" step="0.01" />
-          <span class="rotate">◣</span>
+          <span class="rotate">
+            <i class="iconfont icon-xiasanjiao"></i>
+          </span>
         </div>
       </div>
 
@@ -476,7 +510,9 @@
             <input type="date" class="date-time-input date-field" value="2025-03-26" onchange="updateDateDisplay(this)"
               style="opacity: 0; position: absolute; z-index: 2;" />
             <span class="date">2025-03-26</span>
-            <span class="date-rotate">◣</span>
+            <span class="date-rotate">
+              <i class="iconfont icon-xiasanjiao"></i>
+            </span>
           </div>
         </div>
         <div class="time-row solid paddingS">
